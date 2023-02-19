@@ -1,18 +1,17 @@
 import React from "react";
 import {
-  HStack,
+  
   Heading,
   Flex,
   Select,
-  ButtonGroup,
+ 
   Button,
-  useBreakpointValue,
-  chakra,
+  
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { housesData } from "../../data";
 
-const SearchBar = (props) => {
+const SearchBar = ({temp}) => {
   const [country, setCountry] = useState("Select Country");
   const [property, setProperty] = useState("Select Type");
   const [price, setPrice] = useState("Select Price");
@@ -79,6 +78,7 @@ const SearchBar = (props) => {
 
     const filteredHouses = housesData.filter((house) => {
       const housePrice = parseInt(house.price);
+      const arr = [];
       // no selection
       if (
         isDefault(country) &&
@@ -269,6 +269,7 @@ const SearchBar = (props) => {
       ) {
         return house;
       }
+      return arr;
     });
 
     // setHouses(filteredHouses)
@@ -281,8 +282,13 @@ const SearchBar = (props) => {
   //passing value to callback function passed through props
   useEffect(() => {
     console.log(houses);
-    props.temp(houses);
-  }, [houses]);
+    const MyHouse = ()=>{
+      temp(houses);
+    }
+
+    MyHouse();
+    
+  }, [houses,temp]); 
 
   return (
     <>
