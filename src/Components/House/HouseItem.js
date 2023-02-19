@@ -9,14 +9,14 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { BiBed, BiBath, BiArea } from "react-icons/bi";
-import { housesData } from "../../data";
+
 
 
 const HouseItem = (props) => {
   console.log(props.house)
   let houseData = [];
  
-  if(props.house.length==2){
+  if(props.house.length===2){
     houseData = props.house[1];
   }else{
     houseData = props.house;

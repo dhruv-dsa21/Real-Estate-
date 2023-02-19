@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import { ButtonGroup, VStack, Input, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Button, IconButton, useDisclosure, Center } from '@chakra-ui/react';
+import {  VStack, Drawer, DrawerBody, DrawerCloseButton, DrawerContent,  DrawerHeader, DrawerOverlay, Button, IconButton, useDisclosure, Center } from '@chakra-ui/react';
 import { FiMenu } from 'react-icons/fi';
 
 const Mobile = () => {

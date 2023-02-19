@@ -1,4 +1,4 @@
-import { Center, Grid, Heading, Spinner, Stack } from '@chakra-ui/react';
+import { Grid,Heading,Stack } from '@chakra-ui/react';
 
 import HouseItem from './HouseItem';
 

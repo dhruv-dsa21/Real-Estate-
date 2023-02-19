@@ -4,7 +4,7 @@ import Header from './Components/MainHeader/Header';
 import SearchBar from './Components/SearchSec/SearchBar';
 import HouseDisplay from './Components/House/HouseDisplay';
 import { housesData } from "./data";
-import {} from "@chakra-ui/react";
+
 function App() {
  const [data,setData] = useState(housesData);
 
